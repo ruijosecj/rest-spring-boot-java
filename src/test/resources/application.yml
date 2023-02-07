@@ -1,0 +1,20 @@
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 3600000
+server:
+  port: 8888
+spring:
+  datasource:
+      driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate.ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+      show-sql: false 
+springdoc:
+  pathsToMatch: /person/**
+  swagger-ui:
+    use-root-path: true
